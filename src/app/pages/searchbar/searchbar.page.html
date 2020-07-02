@@ -10,7 +10,7 @@
 
 <ion-content>
     <ion-list>
-        <ion-item *ngFor="let item of albunes">
+        <ion-item *ngFor="let item of albunes | filtro: textoBuscar : 'title'">
             <ion-label>{{item.title}}</ion-label>
         </ion-item>
     </ion-list>

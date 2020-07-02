@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchbarPage implements OnInit {
 
   albunes: any [] = [];
+  textoBuscar = '';
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -19,7 +20,7 @@ export class SearchbarPage implements OnInit {
   }
 
   buscar(event){
-    console.log(event);
+    this.textoBuscar = event.detail.value;
   }
 
 }
